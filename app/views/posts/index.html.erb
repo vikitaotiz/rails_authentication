@@ -1,2 +1,17 @@
-<h1>This is a members only page</h1><hr>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<h2>Posts</h2>
+<div class="trending_news">
+    <div class="row">
+        <% @posts.each do |post| %>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card shadow">
+                    <div class="centered p-5 bn_index_text_noimg">
+                        <%= link_to post.title.upcase(), post, class: "text-decoration-none text-white fw-bold" %>
+                    </div>
+                    <div class="card-body">
+                        <%= post.body %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
