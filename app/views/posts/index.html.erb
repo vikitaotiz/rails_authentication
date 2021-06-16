@@ -6,15 +6,17 @@
             <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                 <div class="card">
                     <div class="card-title pt-2 text-center">
-                        <%= link_to post.title.upcase(), post, class: "text-decoration-none fw-bold" %><br>
+                        <%= post.title.upcase() %><br>
                         <hr><small class="fst-italic fw-light">
-                            By : <%= post.user.email %><br>
+                            <% if user_signed_in? %>
+                             By : <%= post.user.email %><br>
+                            <% end %>
                             On: <%= post.created_at.strftime("%Y %m %d") %>
                         </small>
                         <hr>
                     </div>
                     <div class="card-body">
-                        <%= truncate(post.body, :length => 50) %>
+                        <%= post.body %>
                     </div>
                 </div>
             </div>
