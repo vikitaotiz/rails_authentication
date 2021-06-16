@@ -1,15 +1,17 @@
 <div class="container">
-    <div class="card shadow">
+    <div class="card">
    
-            <div class="centered p-5 bn_index_text_noimg">
+            <div class="card-title p-3 text-center">
                     <h4 class="fw-bolder"><%= @post.title %></h4>
-                    <small class="fst-italic fw-light"><%= @post.created_at.strftime("%Y %m %d") %></small>
+                    <small class="fst-italic fw-light">
+                            By : <%= @post.user.email %>
+                            On: <%= @post.created_at.strftime("%Y %m %d") %>
+                        </small>
                 </div>
         <div class="card-body">
                    
             <div class="d-flex border-top border-bottom p-1 mb-3">
                 <div class="me-auto p-2"><%= link_to ' Back', posts_path, class: "fas fa-arrow-left text-decoration-none main_cl" %></div>
-
                 <% if user_signed_in? %>
                     <div class="p-2">
                         <%= link_to "", edit_post_path(@post), class: "fas fa-edit text-decoration-none cl_green" %>
