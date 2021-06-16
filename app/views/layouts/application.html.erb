@@ -17,8 +17,7 @@
   <body>
     <%= render 'shared/nav' %>
     <div class="container card card-body mt-5">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <%= render 'shared/messages' %>
       <%= yield %>
     </div>
   </body>
