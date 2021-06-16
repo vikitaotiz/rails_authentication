@@ -2,7 +2,7 @@
 
 This is a simple rails authentication application project written on ruby on rails. The project test rails authentication using the devise gem. It involves, installation and configuration of ruby on rails, use of models, controllers, views, routers and database.
 
-![viki-reddit](https://user-images.githubusercontent.com/42869046/120814860-f0efb500-c557-11eb-93ce-b1d63919aaff.JPG)
+![auth](https://user-images.githubusercontent.com/42869046/122291109-1dfb7a80-cefd-11eb-8c75-da0568f405f6.JPG)
 
 ## Built With
 
